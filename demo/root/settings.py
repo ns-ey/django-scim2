@@ -193,12 +193,12 @@ LOGGING = {
             'formatter': 'fluentd',
             'tag': 'app.debug',
         },
-        'scim': {
-            'level': 'DEBUG',
-            'class': 'app.log_handlers.SCIMFluentHandler',
-            'formatter': 'scim-details',
-            'tag': 'app.scim',
-        },
+        #'scim': {
+        #    'level': 'DEBUG',
+        #    'class': 'app.log_handlers.SCIMFluentHandler',
+        #    'formatter': 'scim-details',
+        #    'tag': 'app.scim',
+        #},
     },
 }
 
