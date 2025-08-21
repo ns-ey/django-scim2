@@ -247,17 +247,6 @@ isort = ">=5.0.0,<7"
 test = ["pytest"]
 
 [[package]]
-name = "fluent"
-version = "0.10.0"
-description = "Localization library for expressive translations."
-optional = false
-python-versions = "*"
-groups = ["main"]
-files = [
-    {file = "fluent-0.10.0.tar.gz", hash = "sha256:b5a270e6e4425cdf140ea10d1a7d9c1af713dd00d61b0412f05cd22e1ff84324"},
-]
-
-[[package]]
 name = "fluent-logger"
 version = "0.11.1"
 description = "A Python logging handler for Fluentd event collector"
@@ -761,4 +750,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9"
-content-hash = "a8082d84006915ba943d020e584f15a774f3b72fab9b06f4bb32203060a3a871"
+content-hash = "995f99ab07a82439eeb2726d42fda35c1254161804db9ba9d58626dd3eb0e363"
