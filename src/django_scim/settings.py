@@ -15,11 +15,23 @@ SCIM Service Provider settings, checking for user settings first, then falling
 back to the defaults.
 """
 import importlib
+import os
+import dj_database_url
 
 from django.conf import settings
 
 # Settings defined by user in root settings file for their project.
 USER_SETTINGS = getattr(settings, 'SCIM_SERVICE_PROVIDER', None)
+
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "unsafe-default")
+DEBUG = False
+
+ALLOWED_HOSTS = ["*"]  # Puoi restringere questo in produzione
+
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
+}
+
 
 DEFAULTS = {
     'USER_MODEL_GETTER': 'django.contrib.auth.get_user_model',

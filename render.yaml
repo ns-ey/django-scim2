@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: django-scim2-app
+    env: python
+    buildCommand: poetry install
+    startCommand: gunicorn demo.root.wsgi:application
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: your-secret-key
+      - key: DATABASE_URL
+        fromDatabase:
+          name: scim-db
+databases:
+  - name: scim-db
+    plan: free
