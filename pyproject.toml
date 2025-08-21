@@ -37,6 +37,7 @@ django = ">=4.2"
 gunicorn = "^21.2.0"
 dj-database-url = ">=3.0.1"
 fluent-logger = "^0.11.1"
+django-oauth-toolkit = "^3.0.1"
 
 [tool.poetry.dev-dependencies]
 mock = "^5.1.0"
